@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="indexjs"></script>
+
+    <title>JavaScript Assignment</title>
+
+    <!-- QUESTION 1 -->
+    <!-- Begin code For Loop Program -->
+    <h2>Answer 1->> This output for loop program that is iterating from 0 to 20 and giving us current even or odd value.
+    </h2>
+    <script>
+        for (var x = 0; x <= 20; x++) {
+            if (x === 0) {
+                document.write(x + " is even <br>");
+            }
+            else if (x % 2 === 0) {
+                document.write(x + " is even <br>");
+            }
+            else {
+                document.write(x + " is odd <br><br>");
+            }
+        }
+    </script>
+    <!-- End code For Loop Program  -->
+
+
+
+    <!-- QUESTION 2 -->
+    <!-- Begin code For print even number fron given an Array -->
+    <h2>Answer 2->> This output for print even number from given an aray.</h2>
+    <script>
+        var arr = [13, 23, 12, 45, 22, 48, 66, 100];
+
+        var even = arr.filter(number => {
+            return number % 2 === 0;
+        });
+        document.write(even);
+    </script>
+    <!-- End code For print even number fron given an Array  -->
+
+
+
+    <!-- QUESTION 3 -->
+    <!-- Begin code For return the avarage value of the given array -->
+    <h2> Answer 3->> This output for return the avarage value of the given array.</h2>
+    <script>
+        const arrayAverage = (arr) => {
+            let total = 0;
+            for (let number of arr) {
+                total += number;
+            }
+            return total / arr.length;
+        }
+
+        let ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+        document.write(arrayAverage(ar));
+    </script>
+    <!-- End code For return the avarage value of the given array  -->
+    <br>
+
+
+    <!-- QUESTION 4--->
+    <!-- Begin code For return the value greater than 6 from the given array -->
+    <h2> Answer 4->> This output for return the value greater than 6 from the given array.</h2>
+    <script>
+        const inputWords = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+        const newWords = inputWords.filter((inputWords, index, arr) => {
+            arr.push('newWords')
+            return inputWords.length > 6
+        })
+        document.write(newWords)
+    </script>
+    <!-- End code For return the value greater than 6 from the given array -->
+    <br>
+
+
+    <!-- QUESTION 5 -->
+    <!-- Begin code For object destructuring and use template string when printing the first and last name -->
+    <h2> Answer 5->> This output for object destructuring and use template string when printing the first and last name.
+    </h2>
+    <script>
+        const person = {
+            first: 'Lucky',
+            last: 'Kumar',
+        }
+        function displayName({ first, last }) {
+            document.write(`My name is  ${first} ${last}`);
+        }
+
+        displayName(person);
+    </script>
+    <!-- End code For object destructuring and use template string when printing the first and last name-->
+    <br>
+
+
+    <!-- QUESTION 6 -->
+    <!-- Begin code For sumEvens that accepts an array of numbers -->
+    <h2> Answer 6->> This output for sumEvens that accepts an array of numbers.</h2>
+    <script>
+        const sumEvens = (arr) => {
+            let sum = 0;
+            for (let number of arr) {
+                if (number % 2 === 0) {
+                    sum += number;
+                }
+            }
+            return sum;
+        }
+
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14];
+        document.write(sumEvens(numbers)); 
+    </script>
+    <!-- End code For sumEvens that accepts an array of numbers-->
+
+
+
+
+    <script>
+
+        const weightInLbs = (weightInKg) => {
+            let lbs = weightInKg * 2.2;
+            if (lbs > 150) {
+                document.write(`obese`);
+            } else if (lbs >= 100 && lbs <= 150) {
+                document.write(`you are ok`);
+            } else {
+                document.write(`underweight`);
+            }
+        }
+    </script>
+
+<script>
+    function addData(el) {
+  var table = document.getElementById('list');
+  var tr = table.insertRow();
+  el.form.querySelectorAll('input').forEach(function(el) {
+    var cell = tr.appendChild(document.createElement('td'));
+    cell.textContent = el.value;
+  });
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+    
+    <form style="text-align: center;">
+        <h3><b>Employee Form</b></h3><br> Employee Name : <input type="text" id="Name"><br><br> Email : <input type="text" id="branch"><br><br> Salery : <input type="text" id="address"><br><br> Branch : <input type="text" id="contact"><br><br>
+        <button type="button" onclick="addData(this)">Add</button>
+      </form>
+      </div>
+      
+      <div id="tab">
+        <table id="list" cellspacing="3" cellpadding="3" border="1">
+          <thead>
+            <tr>
+              <td>Name<td>Branch<td>Address<td>Contact
+            </tr>
+          </thead>
+        </table>
+
+        <label for="name">Name</label>
+<input type="text" id="name" /> <br />
+
+</body>
+
+</html>
